@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/">
+
+  <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      /* scroll-behavior: smooth; */
+      width: 500px;
+    }
+
+    hr.solid {
+      border-top: 2px solid #999;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+    <div class="container-fluid d-flex align-items-center">
+      <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+        <img src="../icons/icon.svg" width="38" height="38" class="me-3">
+        文字数カウント
+      </h1>
+    </div>
+  </header>
+
+  <div class="bd-cheatsheet container-fluid bg-body">
+    <section id="forms">
+      <article class="my-3" id="input-group">
+        <div>
+          <div class="input-group">
+            <textarea id="input-text" class="form-control" rows="4"
+              placeholder="カウントしたいテキストを入力するか，もしくは貼り付けてください。"></textarea>
+          </div>
+          <hr class="solid">
+        </div>
+      </article>
+      <article class="my-3">
+        <div>
+          <label class="form-label">文字数</label>
+          <div class="input-group mb-3">
+            <input type="text" id="normal-len" class="form-control" value="0" readonly>
+            <span class="input-group-text">文字</span>
+          </div>
+
+          <label class="form-label">改行を除いた文字数</label>
+          <div class="input-group mb-3">
+            <input type="text" id="no-br-len" class="form-control" value="0" readonly>
+            <span class="input-group-text">文字</span>
+          </div>
+
+          <label class="form-label">改行・空白を除いた文字数</label>
+          <div class="input-group mb-3">
+            <input type="text" id="no-br-sp-len" class="form-control" value="0" readonly>
+            <span class="input-group-text">文字</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </div>
+
+  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

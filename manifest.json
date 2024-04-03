@@ -1,0 +1,41 @@
+{
+  "name": "選択テキストツール",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "選択されたテキストに対して，文字数のカウントおよび翻訳（DeepLを開く）を行います。",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "scripting"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "テキストの文字数をカウント",
+    "default_icon": "icons/icon48.png",
+    "default_popup": "popups/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "modal/content.js"
+      ],
+      "css": [
+        "modal/styles.css"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
